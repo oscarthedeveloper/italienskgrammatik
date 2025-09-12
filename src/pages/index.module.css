@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700..900&display=swap');
+
+.hero {
+  position: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #eeebe3;
+  overflow: hidden;
+}
+
+/* Flaggränder */
+.greenStripe {
+  position: absolute;
+  top: 4vw;
+  width: 100%;
+  height: 1.5vw;
+  transform: rotate(180deg);
+  z-index: 50;
+}
+.whiteStripe {
+  position: absolute;
+  top: 5.5vw;
+  width: 100%;
+  height: 1.5vw;
+  transform: rotate(180deg);
+  z-index: 101;
+}
+.redStripe {
+  position: absolute;
+  top: 7vw;
+  width: 100%;
+  height: 1.5vw;
+  transform: rotate(180deg);
+  z-index: 52;
+}
+
+/* Rubriken */
+.titleBox {
+  position: absolute;
+  text-align: center;
+  top: 2vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-family: 'Oswald', Arial, sans-serif;
+  line-height: 0.92;
+}
+.titleTop {
+  display: block;
+  font-size: 12vw;
+  font-weight: 900;
+  color: #ba181b;
+  letter-spacing: -5px;
+}
+.titleBottom {
+  display: block;
+  font-size: 12vw;
+  font-weight: 900;
+  color: #ba181b;
+  letter-spacing: -5px;
+}
+
+/* Pisa-tornet */
+.pisaTower {
+  position: absolute;
+  top: 12vw;
+  left: 15vw;
+  width: 45vw;
+  height: auto;
+  z-index: 90;
+  pointer-events: none;
+}
+
+/* Vinglas */
+.wineGlass {
+  position: absolute;
+  bottom: 20px;
+  right: -10vw;
+  width: 30vw;
+  height: auto;
+  z-index: 80;
+  pointer-events: none;
+}
+
+/* Knapprutor */
+.buttonGrid {
+  position: absolute;
+  top: 380px;
+  left: 8vw;
+  right: 8vw;
+  width: 84vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 90px);
+  gap: 2.4vw 3vw;
+}
+.gramBtn {
+  background: #293555;
+  color: #15181f;
+  font-size: 2vw;
+  border: none;
+  border-radius: 40px;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(30,30,30,0.12);
+  cursor: pointer;
+  transition: background 0.17s, color 0.17s;
+  outline: none;
+  padding: 0.8em 2em;
+}
+.gramBtn:hover {
+  background: #214092;
+  color: #fff;
+  text-decoration: none;
+}
+.buttonGrid .gramBtn:nth-child(2) { /* SUBSTANTIV, bakom tornet */
+  z-index: 100;
+}
+.buttonGrid .gramBtn:nth-child(4) { /* SUBSTANTIV, bakom tornet */
+  z-index: 100;
+}
+.buttonLink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  /* Dölj bilder som inte ska synas på mobil */
+  .pisaTower,
+  .wineGlass,
+  .greenStripe,
+  .whiteStripe,
+  .redStripe {
+    display: none !important;
+  }
+
+  /* Titel */
+  .titleBox {
+    position: static;
+    width: 100vw;
+    margin-top: 8vw;
+    margin-bottom: 6vw;
+    text-align: center;
+    left: 0;
+    transform: none;
+  }
+  .titleTop,
+  .titleBottom {
+    font-size: 9vw;
+    letter-spacing: -1vw;
+    width: 96vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Knappar */
+  .buttonGrid {
+    position: static;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: auto;
+    width: 96vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+  .gramBtn {
+    font-size: 5vw;
+    min-width: 94vw;
+    border-radius: 40px;
+    margin-bottom: 2vw;
+    padding: 1em 0;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* --- NY SEKTION: Allt om italiensk grammatik --- */
+.infoSection {
+  width: 100%;
+  max-height: 750px;
+  background: #eeebe3;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0 0 4vw 0;
+  position: relative;
+  overflow: hidden;
+  margin-left: -2vw;
+}
+
+.infoContent {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 720px;
+  max-height: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  z-index: 150;
+}
+
+/* Vänster: stor rubrik */
+.infoTitle {
+  flex: 2 1 540px;
+  padding-left: 3vw;
+  padding-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 150;
+}
+.infoTitle span {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 12vw;
+  font-weight: 900;
+  color: #ba181b;
+  line-height: 0.98;
+  margin: 0;
+  letter-spacing: -12px;
+  z-index: 150;
+}
+
+/* Höger: stapel av blåa rutor */
+.promoStack {
+  min-width: 100%;
+  margin-left: -1.5vw;
+  display: absolute;
+  flex-direction: column;
+  z-index: 3;
+  margin-top: 3vw;
+  height: 110vw;         /* synlig höjd */
+  max-height: 100%;
+  overflow: hidden;     /* klipp av allt över/under */
+}
+.promoBox {
+  background: #39456b;
+  color: #15181f;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  font-size: 2vw;
+  font-weight: 600;
+  width: 28vw;
+  height: 6vw;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 4px;
+  box-shadow: 0 2px 4px 0 rgba(30,30,35,0.10);
+}
+.promoBox span {
+  font-size: 3.75vw;
+  font-family: 'Bricolage Grotesque', Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-left: 4vw;
+}
+
+/* Flaggränder – vertikalt/diagonalt genom sektionen */
+.infoGreenStripe {
+  position: absolute;
+  top: 0; left: 64vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(0deg);
+  z-index: 10;
+}
+.infoWhiteStripe {
+  position: absolute;
+  top: 0; left: 65.5vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(0deg);
+  z-index: 150;
+}
+.infoRedStripe {
+  position: absolute;
+  top: 0; left: 67vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(0deg);
+  z-index: 12;
+}
+
+.infoGreenStripe, .infoWhiteStripe, .infoRedStripe {
+  mask-image: linear-gradient(to bottom, transparent 2%, #000 22%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, #000 22%, #000 82%, transparent 100%);
+  pointer-events: none;
+}
+
+.infoGreenStripe2 {
+  position: absolute;
+  top: 0; left: 60vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(18deg);
+  z-index: 1;
+}
+.infoWhiteStripe2 {
+  position: absolute;
+  top: 0; left: 61.5vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(18deg);
+  z-index: 150;
+}
+.infoRedStripe2 {
+  position: absolute;
+  top: 0; left: 63vw;
+  height: 100%; width: 1.5vw;
+  min-height: 970px;
+  transform: rotate(18deg);
+  z-index: 10;
+}
+
+.infoGreenStripe2, .infoWhiteStripe2, .infoRedStripe2 {
+  mask-image: linear-gradient(to bottom, transparent 2%, #000 22%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, #000 22%, #000 82%, transparent 100%);
+  pointer-events: none;
+}
+
+/* RESPONSIVT för mobil */
+@media (max-width: 850px) {
+.hero {
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 6vw;
+}
+
+  .infoSection, .infoContent {
+    flex-direction: column;
+    min-height: 600px;
+  }
+  .infoTitle {
+    align-items: flex-start;
+    padding-top: 7vw;
+    padding-bottom: 5vw;
+  }
+  .infoTitle span {
+    font-size: 11vw;
+  }
+  .promoStack {
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4vw;
+  }
+  .promoBox {
+    font-size: 4.5vw;
+    width: 72vw;
+    min-width: 170px;
+    height: 48px;
+  }
+  .promoBox span {
+    font-size: 4vw;
+  }
+  .infoGreenStripe,
+  .infoWhiteStripe,
+  .infoRedStripe {
+    left: 66vw;
+    height: 132vw;
+    min-height: 650px;
+    width: 12px;
+  }
+  .infoPisaTower {
+    left: -12vw;
+    width: 44vw;
+    min-width: 100px;
+    opacity: 0.33;
+  }
+  .infoWineGlass {
+    width: 23vw;
+    min-width: 64px;
+    opacity: 0.44;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /* Dölj alla flagg-ränder i ny sektion på mobil */
+  .infoGreenStripe,
+  .infoWhiteStripe,
+  .infoRedStripe,
+  .infoGreenStripe2,
+  .infoWhiteStripe2,
+  .infoRedStripe2 {
+    display: none !important;
+  }
+
+  .infoSection,
+  .infoContent {
+    flex-direction: column !important;
+    align-items: center !important;
+    min-height: 500px !important;
+    width: 100vw !important;
+    padding: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .infoTitle {
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 8vw !important;
+    margin-bottom: 6vw !important;
+    width: 98vw !important;
+    text-align: center !important;
+    max-height: fit-content;
+  }
+
+  .infoTitle span {
+    font-size: 10vw !important;
+    line-height: 1.03 !important;
+    letter-spacing: -0.5vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .promoStack {
+    align-items: center !important;
+    margin: 0 auto !important;
+    width: 90vw !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .promoBox {
+    width: 85vw !important;
+    height: 9vw !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    font-size: 5vw !important;
+    margin-bottom: 2vw !important;
+    border-radius: 16px !important;
+  }
+
+  .promoBox span {
+    font-size: 5vw !important;
+    letter-spacing: 0.14em !important;
+    margin-left: 0 !important;
+  }
+}
+

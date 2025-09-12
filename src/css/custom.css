@@ -1,0 +1,407 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #0f025b;
+  --ifm-color-primary-dark: #0d0252;
+  --ifm-color-primary-darker: #0d024d;
+  --ifm-color-primary-darkest: #0a0140;
+  --ifm-color-primary-light: #100264;
+  --ifm-color-primary-lighter: #110269;
+  --ifm-color-primary-lightest: #130376;
+  --background-color: #f6f4ef;
+  --highlight: #0f025b;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+:root {
+  background: #f6f4ef;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Serif+Display:ital@0;1&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Luxurious+Roman&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+.theme-doc-sidebar-container {
+  max-width: 15rem;
+  background-color: #ba181b; /* Mörkröd bakgrund som navbar */
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  color: white;
+}
+
+.menu__link {
+  display: block;
+  max-width: 12rem;
+  font-size: 1rem;
+  color: black;
+  background-color: #eeebe3;  /* Orange bakgrund som navbar-knappar */
+  border-radius: 24px;
+  padding: 0.6em 1rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+.menu__link:hover {
+  background-color: #bbb5a5 !important;  /* Limegrön hover */
+  color: #17230e; /* Mörk text */
+}
+
+.menu__list-item-collapsible {
+  background-color: #eeebe3 !important;
+  width: 12rem;
+  display: block;
+  border-radius: 24px;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: #bbb5a5 !important;
+}
+
+.menu__list-item-collapsible {
+  background-color: #ba181b;
+}
+
+.menu__link.menu__link--active {
+  background-color: #eeebe3; /* Limegrön för aktiv länk */
+  color: #17230e;
+  font-weight: 700;
+}
+
+/* Justeringar för undermenyer (indrag etc) */
+.menu__list-item.category ul.menu__list {
+  padding-left: 1.2rem;
+}
+
+/* Scrollbar (valfritt) */
+.theme-doc-sidebar-container::-webkit-scrollbar {
+  width: 8px;
+}
+.theme-doc-sidebar-container::-webkit-scrollbar-track {
+  background: #1a2a11;
+}
+.theme-doc-sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #7cf06b;
+  border-radius: 4px;
+}
+
+/* Responsiv anpassning */
+@media (max-width: 900px) {
+  .theme-doc-sidebar-container {
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+  }
+  .menu__link {
+    font-size: 0.95rem;
+    padding: 0.5em 0.75em;
+  }
+}
+
+.footer {
+  background-color: #0f025b;
+}
+
+.navbar {
+  background-color: #0f025b;
+  color: black;
+}
+
+.navbar__title.text--truncate {
+  color: #eeebe3;
+  font-family: IBM Plex Sans;
+}
+
+.navbar__item, .navbar__link, .navbar__link--active {
+  color: #eeebe3;
+  font-family: IBM Plex Sans;
+}
+
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: IBM Plex Sans;
+}
+
+h2 {
+  margin-left: 1rem;
+}
+
+h3 {
+  margin-left: 2rem;
+}
+
+h4 {
+  margin-left: 3rem;
+}
+
+h4 {
+  margin-left: 4rem;
+}
+
+.custom-quote {
+  padding: 10px; /* Padding inside the box */
+  background-color: white; /* Background color of the box */
+  max-width: 650px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-left: #0a0140 4px solid;
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+.custom-quote>:first-child {
+  margin-bottom: 0;
+}
+
+table {
+  max-width: fit-content; /* Make table width full */
+  border-collapse: collapse; /* Collapse borders */
+  background-color: white;
+  border-radius: 10px; /* Adds rounded corners to the entire table */
+  border-color: var(--background-color);
+  font-family: IBM Plex Sans;
+}
+
+table td {
+  padding: 12px; /* Padding inside cells */
+  text-align: left; /* Text alignment */
+  border-color: var(--background-color);
+}
+
+table th {
+  padding: 12px; /* Padding inside cells */
+  text-align: center; /* Text alignment */
+  border-color: var(--background-color);
+}
+
+th {
+  border-color: var(--background-color);
+}
+
+tbody {
+  border-color: var(--background-color);
+}
+
+li {
+  font-family: IBM Plex Sans;
+}
+
+li::marker {
+  font-weight: 900;
+}
+
+.theme-admonition-info.admonition_xJq3.alert.alert--info {
+  background-color: white;
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0px 10px 10px 0px;
+  padding: 1rem;
+  font-family: IBM Plex Sans;
+  flex: 1;
+}
+
+.theme-admonition.theme-admonition-note.admonition_xJq3.alert.alert--secondary {
+  background-color: white;
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 0px 10px 10px 0px;
+  padding: 1rem;
+  font-family: IBM Plex Sans;
+  flex: 1;
+}
+
+.details_lb9f, .isBrowser_bmU9, .alert.alert--info, .details_b_Ee {
+  background-color: white;
+  border-left: 4px solid #ba181b;
+  border-radius: 0px 10px 10px 0px;
+  border-bottom: var(--background-color);
+  border-top: var(--background-color);
+  border-right: var(--background-color);
+  padding: 1rem;
+  font-family: IBM Plex Sans;
+  flex: 1;
+--docusaurus-details-decoration-color: #ba181b;
+}
+
+.admonition-table-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.admonition-box {
+  flex: 1;
+}
+
+.table-box {
+  flex: 2;
+}
+
+.subject-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+.blue-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.red-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ba181b;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.aqua-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: lightseagreen;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.magenta-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: magenta;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.subject-text {
+  font-size: 1rem;
+  color: black;
+  font-family: IBM Plex Sans;
+}
+
+.highlight-red {
+  background-color: #ba181b; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-grey {
+  background-color: grey; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-blue {
+  background-color: var(--ifm-color-primary); /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-aqua {
+  background-color: lightseagreen; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-green {
+  background-color: green; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-magenta {
+  background-color: magenta; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-yellowgreen {
+  background-color: darkorange; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-peru {
+  background-color: peru; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.highlight-purple {
+  background-color: purple; /* Ljus bakgrund */
+  color: white; /* Textfärg från ditt tema */
+  padding: 0.10em 0.4em;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.navbar__title:after {
+  background-color: #ba181b;
+  border-radius: 4px;
+  color: #fff;
+  content: "BETA";
+  margin: 0 .75em;
+  padding: .2em .5em;
+  margin-left: 1em;
+  margin-right: 0em;
+}
+
+.navbar__item, .navbar__link, .navbar__link--active {
+  margin-right: 0em;
+  margin-left: -0.25em;
+}
+

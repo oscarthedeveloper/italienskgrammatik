@@ -1,0 +1,37 @@
+.highlight-tooltip {
+  text-decoration: underline dotted;
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  --ifm-paragraph-margin-bottom: none;
+}
+
+/* Tooltip-bubblan */
+.highlight-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* ovanför ordet */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 8px 10px;
+  border-radius: 6px;
+  white-space: normal;
+  font-style: italic;
+  width: 100px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  z-index: 999;
+}
+
+
+
+/* Visa tooltip på hover */
+.highlight-tooltip:hover::after,
+.highlight-tooltip:hover::before {
+  opacity: 1;
+}

@@ -1,0 +1,240 @@
+---
+sidebar_position: 1
+---
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+import HighlightTooltip from '@site/src/components/HighlightTooltip';
+
+# <Highlight color="#0f025b">Genus & numerus</Highlight>
+
+<HighlightTooltip
+  text="I italienskan finns <strong>två genus</strong> och <strong>två numerus</strong>. Ett substantiv är antingen <i>maskulint</i> eller <i>feminint</i> och kan stå i antingen <i>singular</i>  eller <i>plural</i>. "
+  highlights={[
+    { word: "maskulint", tooltip: "🇮🇹 maschile" },
+    { word: "feminint", tooltip: "🇮🇹 femminile" }
+  ]}
+/>
+
+:::info REGLER
+
+1. Substantiv som i **singular** slutar på **-o** är i regel maskulina, t.ex. *il ragazz**o***. I **plural** omvandlas detta **-o** i regel till ett **-i**.
+2. Substantiv som i **singular** slutar på **-a** är i regel feminina, t.ex. *la donn**a***. I **plural** omvandlas detta **-a** i regel till ett **-e**.
+3. Substantiv som i **singular** slutar på **-e** är antingen feminina eller maskulina, t.ex. *il sol**e*** och *la torr**e***. I **plural** omvandlas detta **-e** i regel till ett **-i**.
+
+:::
+
+## <Highlight color="#0f025b">Artiklar</Highlight>
+
+I italienskan kan ett substantiv föregås av en *bestämd artikel* eller en *obestämd artikel*. I svenskan placerar vi den bestämda artikeln på substantivet, t.ex. *bil**en***, och den obestämda artikeln före substantivet, t.ex. ***en** bil*. 
+
+I italienskan placeras alla artiklar **före** substantivet. 
+
+### <Highlight color="#0f025b">De bestämda artiklarna</Highlight>
+
+<div class="row">
+  <div class="col col--7">
+:::info REGLER
+
+**Den bestämda artikeln är i singular:**
+1. *il* framför maskulina ord som börjar på konsonant
+2. *l'* framför maskulina ord som börjar på vokal
+3. *lo* framför maskulina ord som börjar på **s** + konsonant, **z**, **ps**, **sje**- eller **j**-ljud
+4. *la* framför feminina ord som börjar på konsonant
+5. *l'* framför feminina ord som börjar på vokal, men här **kan** även *la* förekomma
+
+**Den bestämda artikeln är i plural:**
+1. *i* framför maskulina ord som börjar på konsonant
+2. *gli* framför maskulina ord som börjar på vokal, **s** + konsonant, **z**, **ps**, **sje**- eller **j**-ljud
+3. *le* framför alla feminina ord
+
+:::
+  </div>
+
+  <div class="col col--5">
+<table>
+  <tbody>
+    <tr>
+      <td colspan="2">**Maskulinum**</td>
+      <td colspan="2">**Femininum**</td>
+    </tr>
+    <tr>
+      <td>**Singular**</td>
+      <td>**Plural**</td>
+      <td>**Singular**</td>
+      <td>**Plural**</td>
+    </tr>
+    <tr>
+      <td>
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> il </div>
+      </td>
+      <td>
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> i </div>
+      </td>
+      <td>
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> la </div>
+      </td>
+      <td rowspan="3">
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> le </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> l' </div>
+      </td>
+      <td rowspan="2">
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> gli </div>
+      </td>
+      <td rowspan="2">
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> l' </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> lo </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+
+### <Highlight color="#0f025b">De obestämda artiklarna</Highlight>
+
+<div class="row">
+  <div class="col col--7">
+:::info REGLER
+
+**Den obestämda artikeln är:**
+1. *un* framför maskulina ord som börjar på konsonant eller vokal
+2. *uno* framför maskulina ord som börjar på **s** + konsonant, **z**, **ps**, **sje**- eller **j**-ljud.
+3. *una* framför feminina ord som börjar på konsonant
+4. *un'* framför feminina ord som börjar på vokal, men här kan även *una* förekomma.
+
+:::
+  </div>
+  <div class="col col--5">
+<table>
+  <tbody>
+    <tr>
+      <td>**Maskulinum**</td>
+      <td>**Femininum**</td>
+    </tr>
+    <tr>
+      <td><div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> un </div></td>
+      <td><div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> una </div></td>
+    </tr>
+    <tr>
+      <td><div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> uno </div></td>
+      <td rowspan="2"><div style={{ border: '4px solid var(--highlight)', padding: '10px', fontSize: '20px', fontWeight: 'bold', borderRadius: '5px', color: 'var(--highlight)', textAlign: 'center' }}> un' </div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div>
+
+### <Highlight color="#0f025b">Exempel</Highlight>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="Obestämd form" default>
+<div class="custom-quote">  
+*<span className="highlight">Un</span> libro italiano.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *En italiensk bok.*</small>    
+*<span className="highlight">Uno</span> specchio rotondo.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *En rund spegel.*</small>    
+*<span className="highlight">Una</span> ragazza italiana.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *En italiensk tjej.*</small>    
+*<span className="highlight">Un'</span>arancia matura.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *En mogen apelsin.*</small>  
+</div>
+  </TabItem>
+  <TabItem value="orange" label="Bestämd form">
+<div class="custom-quote">  
+*<span className="highlight">Il</span> libro italiano.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *Den italienska boken.*</small>    
+*<span className="highlight">Lo</span> specchio rotondo.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *Den runda spegeln.*</small>    
+*<span className="highlight">La</span> ragazza italiana.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *Den italienska tjejen.*</small>    
+*<span className="highlight">L'</span>arancia matura.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *Den mogna apelsinen.*</small>     
+*<span className="highlight">L'</span>esempio buono.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *Det bra exemplet.*</small>   
+</div>
+  </TabItem>
+  <TabItem value="banana" label="Plural">
+<div class="custom-quote">  
+*<span className="highlight">I</span> libri italiani.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *De italienska böckerna.*</small>    
+*<span className="highlight">Gli</span> specchi rotondi.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *De runda speglarna.*</small>    
+*<span className="highlight">Le</span> ragazze italiane.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *De italienska tjejerna.*</small>    
+*<span className="highlight">Le</span>arance mature.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *De mogna apelsinerna.*</small>     
+*<span className="highlight">Gli</span> esempi buoni.*   
+&nbsp;&nbsp;&nbsp;<small>🇸🇪 *De bra exemplen.*</small>   
+</div>
+  </TabItem>
+  </Tabs>
+
+## <Highlight color="#0f025b">Pluralbildning av substantiv</Highlight>
+
+Som bekant får 
+- substantiv på **-o** ändelsen **-i** i plural;
+- substantiv på **-a** ändelsen **-e**;
+- substantiv på **-e** ändelsen **-i**.
+
+:::note EXEMPEL
+
+*Un libro, due libri.    
+Una ragazza, due ragazze.     
+Una chiave, due chiavi.*
+
+:::
+
+<details>
+  <summary>**Untantag**</summary>
+  <div>
+<a>  
+Det finns substantiv som avböjder från dessa regler. 
+
+- **Feminina** ord som slutar på **-o**: *la mano*, *la foto*, *la radio*, *la moto*, *l'auto*.
+- **Maskulina** ord som slutar på **-a**: *il clima*, *il poeta*, *il programma*, *il problema*, *il telegramma*.
+</a>
+  </div>
+</details>
+
+### <Highlight color="#0f025b">Oförändrade i plural</Highlight>
+
+Det finns däremot substantiv är **ofärändrade i plural**. Dessa är:
+- **de substantiv som slutar på betonad vokal**: *la città → le città, la difficoltà → le difficoltà, il caffè → i caffè, il papà → i papà, il re → i re, la virtù → le virtù*. 
+- **de substantiv som slutar på konsonant**: *l'autobus → i autobus, il bar → i bar, lo sport → gli sport, il film → i film, il tram → i tram, il camion → i camion, il computer → i computer*.
+- **de flesta substantiv som slutar på *-si***: *la crisi → le crisi, la sintassi → le sintassi, la tesi → le tesi*.
+
+### <Highlight color="#0f025b">Singular: -a, plural: -i</Highlight>
+
+Många substantiv som slutar på **-ma** är maskulina och får **-i** i plural: *il problema → i problemi, il poema → i poemi, il programma → i programmi, lo schemi → gli schemi, il diploma → i diplomi*.
+
+### <Highlight color="#0f025b">Substantiv på -co, -go</Highlight>
+
+Substantiv på **-co** och **-go** bildar plural på följande sätt:
+- **-chi** och **-ghi** om tonvikten ligger på andra stavelsen från slutet, t.ex. *il fuoco → i fuochi*.
+- **-ci** och **-gi** om tonvikten ligger på tredje stavelsen från slutet, t.ex. *il medico → i medici*.
+
+### <Highlight color="#0f025b">Helt oregelbundna pluralformer</Highlight>
+
+Det finns några substantiv som är helt oregelbundna i sin pluralform: *l'uomo → gli uomini, il bue → i buoi, il dio → gli dei, l'arma → le armi, l'ala → le ali*.
