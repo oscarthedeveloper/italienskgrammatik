@@ -37,10 +37,10 @@ export default function Home() {
   <Link to="/docs/Verb/Intro" className={styles.gramBtn}>
     VERB
   </Link>
-  <Link to="/docs/Pronomen" className={styles.gramBtn}>
+  <Link to="/docs/Intro" className={styles.gramBtn}>
     PRONOMEN
   </Link>
-  <Link to="/docs/Adverb" className={styles.gramBtn}>
+  <Link to="/docs/Intro" className={styles.gramBtn}>
     ADVERB
           </Link>
         </div>
