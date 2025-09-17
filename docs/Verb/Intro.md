@@ -137,7 +137,7 @@ I talspråk kan ibland *che* uteslutas.
 <span className="highlight-purple">PRESENS</span></td>
 <td><div style={{ padding: '10px', fontSize: '30px', color: 'var(--highlight)', textAlign: 'center' }}> → </div></td>
 <td style={{ textAlign: 'center' }}><span className="highlight-blue">BALLI</span></td>
-<td>*jag dansade*</td>
+<td>*jag danse*</td>
 </tr>
 <tr>
 <td style={{ textAlign: 'center' }}><span className="highlight-red">CREDERE</span></td>
